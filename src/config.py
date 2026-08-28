@@ -1,3 +1,4 @@
+import math
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -22,3 +23,9 @@ NUMERIC_COLS = [
 ]
 
 RANDOM_STATE = 42
+
+# The dataset stores log(price_INR / 1000).
+# Reverse: price_INR = exp(normalized_value) * 1000
+def denormalize(x: float) -> float:
+    """Convert normalized log-price back to Indian Rupees."""
+    return math.exp(x) * 1000

@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: fair-price-estimator
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app/streamlit_app.py --server.port $PORT --server.address 0.0.0.0
+    envVars:
+      - key: PYTHONPATH
+        value: /opt/render/project/src
+      - key: PYTHONUNBUFFERED
+        value: "1"
