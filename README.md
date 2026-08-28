@@ -2,8 +2,6 @@
 
 A data-driven resale price estimator for used smartphones, built with **LightGBM Quantile Regression** and **SHAP explainability**.
 
-## 🚀 Live Demo
-Deployed on Render → [fair-price-estimator.onrender.com](https://fair-price-estimator.onrender.com)
 
 ---
 
